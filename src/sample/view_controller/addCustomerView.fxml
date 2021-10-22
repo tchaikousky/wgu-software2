@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view_controller.AddCustomerController">
+    <children>
+        <MenuBar prefHeight="25.0" prefWidth="889.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#handleClose" text="Close" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <VBox id="menuColumn" fx:id="appMenuVBox" alignment="CENTER" maxWidth="151.0" prefHeight="775.0" prefWidth="151.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Button fx:id="appointmentsButton" mnemonicParsing="false" onAction="#handleAppointmentsButton" prefHeight="50.0" prefWidth="151.0" text="Appointments" />
+            <Button fx:id="customersButton" mnemonicParsing="false" onAction="#handleCustomersButton" prefHeight="50.0" prefWidth="151.0" text="Customers" />
+            <Button fx:id="reportsButton" mnemonicParsing="false" onAction="#handleReportsButton" prefHeight="50.0" prefWidth="151.0" text="Reports" />
+         </children>
+      </VBox>
+        <VBox layoutX="195.0" layoutY="62.0" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="194.0" AnchorPane.topAnchor="62.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="94.0" prefWidth="467.0">
+                    <children>
+                        <Label fx:id="newCustomerLabel" text="New Customer Record">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="100.0">
+                    <children>
+                        <Label fx:id="customerIDLabel" text="Customer ID">
+                            <HBox.margin>
+                                <Insets right="15.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="customerIDTextField" disable="true" editable="false" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <HBox prefHeight="100.0" prefWidth="250.0">
+                            <children>
+                                <Label fx:id="nameLabel" text="Name">
+                                    <HBox.margin>
+                                        <Insets right="32.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="nameTextField">
+                                    <HBox.margin>
+                                        <Insets left="15.0" />
+                                    </HBox.margin>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="250.0">
+                            <children>
+                                <Label fx:id="addressLabel" text="Address">
+                                    <HBox.margin>
+                                        <Insets right="39.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="addressTextField">
+                                    <HBox.margin>
+                                        <Insets left="15.0" />
+                                    </HBox.margin>
+                                </TextField>
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <HBox prefHeight="50.0" prefWidth="250.0">
+                            <children>
+                                <Label fx:id="postalCodeLabel" text="Postal Code" />
+                                <TextField fx:id="postalCodeTextField">
+                                    <HBox.margin>
+                                        <Insets left="15.0" />
+                                    </HBox.margin>
+                                </TextField>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="250.0">
+                            <children>
+                                <Label fx:id="phoneNumberLabel" text="Phone Number" />
+                                <TextField fx:id="phoneNumberTextField">
+                                    <HBox.margin>
+                                        <Insets left="15.0" />
+                                    </HBox.margin>
+                                </TextField>
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <HBox prefHeight="100.0" prefWidth="250.0" spacing="15.0">
+                            <children>
+                                <Label fx:id="divisionLabel" prefHeight="17.0" prefWidth="50.0" text="Division">
+                                    <HBox.margin>
+                                        <Insets right="15.0" />
+                                    </HBox.margin>
+                                </Label>
+                        <ComboBox fx:id="divisionComboBox" />
+                            </children>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="250.0" spacing="30.0">
+                            <children>
+                                <Label fx:id="countryLabel" prefHeight="17.0" prefWidth="52.0" text="Country">
+                                    <HBox.margin>
+                                        <Insets right="15.0" />
+                                    </HBox.margin>
+                                </Label>
+                        <ComboBox fx:id="countryComboBox" onAction="#handleCountrySelection" />
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <children>
+                        <HBox alignment="CENTER" prefWidth="200.0">
+                            <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                           <children>
+                                      <Button fx:id="saveButton" mnemonicParsing="false" onAction="#handleSaveButton" text="Save" />
+                              <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#handleCancelButton" text="Cancel" />
+                           </children>
+                        </HBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

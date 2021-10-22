@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view_controller.LoginController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="673.0">
+         <center>
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="673.0" BorderPane.alignment="CENTER">
+               <center>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="loginHeaderLabel" text="Software 2">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="userNameLabel" text="Username">
+                                 <padding>
+                                    <Insets right="3.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="userNameTextField" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" fillHeight="false" prefHeight="48.0" prefWidth="673.0" VBox.vgrow="NEVER">
+                           <children>
+                              <Label fx:id="passwordLabel" text="Password">
+                                 <padding>
+                                    <Insets right="3.0" />
+                                 </padding>
+                              </Label>
+                              <PasswordField fx:id="passwordPasswordField">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin></PasswordField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="673.0">
+                           <children>
+                              <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLoginButton" text="Login">
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="zoneHbox" alignment="TOP_CENTER" prefHeight="83.0" prefWidth="673.0">
+                           <children>
+                              <Label fx:id="zoneLabel" text="Label" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</GridPane>
